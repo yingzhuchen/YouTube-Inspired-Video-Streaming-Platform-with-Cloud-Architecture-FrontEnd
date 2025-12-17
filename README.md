@@ -111,7 +111,7 @@ src/
 │   └── UserHistory.vue      # Watch history
 ├── App.vue
 └── main.js
-
+```
 ---
 
 ## 📸 Screenshots
