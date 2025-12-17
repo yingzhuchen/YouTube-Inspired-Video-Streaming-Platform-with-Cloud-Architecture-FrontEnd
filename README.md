@@ -122,7 +122,7 @@ The overall user experience of this platform is inspired by **Youtube**, followi
 
 ###  User Registration & Login
 
-<img src="login in.png" alt="Login" width="400"/>
+<img src="login in.png" alt="Login" width="800"/>
 
 - Users start by **registering or logging in** via a modal dialog
 - After successful authentication, the backend issues a **JWT token**, which is centrally managed on the frontend
@@ -136,7 +136,7 @@ The overall user experience of this platform is inspired by **Youtube**, followi
 
 ###  Homepage & Video Browsing
 
-<img src="homepage.jpg" alt="Homepage" width="400"/>
+<img src="homepage.jpg" alt="Homepage" width="800"/>
 
 - After login, users enter the homepage, whose layout is inspired by Youtube:
   - Top carousel for recommended or trending content
@@ -152,7 +152,7 @@ These data points are sent to the backend to support recommendation modeling.
 
 ###  Video Player & User Interaction
 
-<img src="video.png" alt="Video Player" width="400"/>
+<img src="video.png" alt="Video Player" width="800"/>
 
 - The video detail page integrates **XGPlayer** for stable HTML5 video playback
 - A complete interaction system is provided:
@@ -168,7 +168,7 @@ These data points are sent to the backend to support recommendation modeling.
 
 ### 💬 Comment System
 
-<img src="comment.png" alt="Comments" width="400"/>
+<img src="comment.png" alt="Comments" width="800"/>
 
 - The comment system supports:
   - Top-level comments
