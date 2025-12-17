@@ -4,7 +4,70 @@ A high-performance, full-stack video streaming platform frontend with cloud arch
 This repository contains the **Frontend source code**, built with **Vue.js 2.x** and **Element UI**.
 
 ---
+##  Screenshots & User Workflow
 
+The overall user experience of this platform is inspired by **Youtube**, following a complete workflow of  
+**Registration & Login → Content Browsing → User Interaction → Personalized Recommendation**, forming a closed content loop.
+
+---
+
+###  User Registration & Login
+
+<img src="login in.png" alt="Login" width="800"/>
+
+- Users start by **registering or logging in** via a modal dialog
+- After successful authentication, the backend issues a **JWT token**, which is centrally managed on the frontend
+- Login status is required for:
+  - Like / Coin / Collect actions
+  - Following content creators
+  - Posting comments and sending danmu
+  - Collecting user behavior data for personalization
+
+---
+
+###  Homepage & Video Browsing
+
+<img src="homepage.jpg" alt="Homepage" width="800"/>
+
+- After login, users enter the homepage, whose layout is inspired by Youtube:
+  - Top carousel for recommended or trending content
+  - Category-based video feeds (Anime, Tech, Gaming, etc.)
+- Users can continuously browse videos, while the system records key behavior signals:
+  - Click events
+  - Video playback
+  - Watch duration
+
+These data points are sent to the backend to support recommendation modeling.
+
+---
+
+###  Video Player & User Interaction
+
+<img src="video.png" alt="Video Player" width="800"/>
+
+- The video detail page integrates **XGPlayer** for stable HTML5 video playback
+- A complete interaction system is provided:
+  - 👍 Like
+  - 🪙 Coin
+  - ⭐ Collect
+- **Real-time danmu (bullet comments)**:
+  - Implemented using **WebSocket**
+  - Precisely synchronized with the video timeline
+- All interaction behaviors are logged as important features for personalized recommendations
+
+---
+
+###  Comment System
+
+<img src="comment.png" alt="Comments" width="800"/>
+
+- The comment system supports:
+  - Top-level comments
+  - Nested replies (threaded discussions)
+- Users can reply to comments, enhancing community engagement
+- Comment activity is also incorporated into user interest profiling
+
+---
 ##  Introduction
 
 This project is the frontend interface for a **scalable video streaming ecosystem**, designed to handle **high-concurrency user interactions**, including:
@@ -112,71 +175,6 @@ src/
 ├── App.vue
 └── main.js
 ```
----
-##  Screenshots & User Workflow
-
-The overall user experience of this platform is inspired by **Youtube**, following a complete workflow of  
-**Registration & Login → Content Browsing → User Interaction → Personalized Recommendation**, forming a closed content loop.
-
----
-
-###  User Registration & Login
-
-<img src="login in.png" alt="Login" width="800"/>
-
-- Users start by **registering or logging in** via a modal dialog
-- After successful authentication, the backend issues a **JWT token**, which is centrally managed on the frontend
-- Login status is required for:
-  - Like / Coin / Collect actions
-  - Following content creators
-  - Posting comments and sending danmu
-  - Collecting user behavior data for personalization
-
----
-
-###  Homepage & Video Browsing
-
-<img src="homepage.jpg" alt="Homepage" width="800"/>
-
-- After login, users enter the homepage, whose layout is inspired by Youtube:
-  - Top carousel for recommended or trending content
-  - Category-based video feeds (Anime, Tech, Gaming, etc.)
-- Users can continuously browse videos, while the system records key behavior signals:
-  - Click events
-  - Video playback
-  - Watch duration
-
-These data points are sent to the backend to support recommendation modeling.
-
----
-
-###  Video Player & User Interaction
-
-<img src="video.png" alt="Video Player" width="800"/>
-
-- The video detail page integrates **XGPlayer** for stable HTML5 video playback
-- A complete interaction system is provided:
-  - 👍 Like
-  - 🪙 Coin
-  - ⭐ Collect
-- **Real-time danmu (bullet comments)**:
-  - Implemented using **WebSocket**
-  - Precisely synchronized with the video timeline
-- All interaction behaviors are logged as important features for personalized recommendations
-
----
-
-### 💬 Comment System
-
-<img src="comment.png" alt="Comments" width="800"/>
-
-- The comment system supports:
-  - Top-level comments
-  - Nested replies (threaded discussions)
-- Users can reply to comments, enhancing community engagement
-- Comment activity is also incorporated into user interest profiling
-
----
 
 ###  Personalized Recommendation
 
