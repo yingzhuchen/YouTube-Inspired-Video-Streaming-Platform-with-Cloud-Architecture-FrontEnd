@@ -111,6 +111,9 @@ src/
 │   └── UserHistory.vue      # Watch history
 ├── App.vue
 └── main.js
+
+---
+
 ## 📸 Screenshots
 
 ### Homepage & Video Player
@@ -123,6 +126,3 @@ src/
 
 ### Comments System
 <img src="comment.png" alt="Comments" width="400"/>
-
----
-
